@@ -86,8 +86,8 @@ export default function App() {
         const subjectMatch = alert.subject.toLowerCase().includes(query);
         const fromMatch = alert.from.toLowerCase().includes(query);
         const msgIdMatch = alert.message_id.toLowerCase().includes(query);
-        const cityMatch = alert.geolocation?.city.toLowerCase().includes(query) || false;
-        const countryMatch = alert.geolocation?.country.toLowerCase().includes(query) || false;
+        const cityMatch = alert.geolocation?.city?.toLowerCase().includes(query) || false;
+        const countryMatch = alert.geolocation?.country?.toLowerCase().includes(query) || false;
 
         return subjectMatch || fromMatch || msgIdMatch || cityMatch || countryMatch;
       }
